@@ -3,36 +3,32 @@ package com.myricseptember.countryfactcomposestarter
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import com.myricseptember.countryfactcomposestarter.screens.home.HomeScreen
 import com.myricseptember.countryfactcomposestarter.ui.theme.CountryFactComposeStarterTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CountryFactComposeStarterTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
-                }
+            CountriesApp {
+                HomeScreen()
             }
         }
     }
 }
-
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun CountriesApp(content: @Composable () -> Unit) {
+    CountryFactComposeStarterTheme() {
+        content()
+    }
 }
-
 @Preview(showBackground = true)
 @Composable
+
 fun DefaultPreview() {
-    CountryFactComposeStarterTheme {
-        Greeting("Android")
+    CountriesApp {
+        HomeScreen()
     }
 }

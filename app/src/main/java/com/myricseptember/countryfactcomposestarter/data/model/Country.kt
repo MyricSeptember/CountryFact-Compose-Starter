@@ -1,8 +1,7 @@
 package com.myricseptember.countryfactcomposestarter.data.model
 
 data class Country(
-    var
-    name: String = "",
+    var name: String = "",
     var population: String = "",
     var largest_city: String = "",
     var capital_city: String = "",
