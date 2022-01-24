@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun DetailScreen() {
     Scaffold(topBar = {
-        TopAppBar(backgroundColor = Color.Magenta, elevation = 5.dp) {
+        TopAppBar(backgroundColor = Color.Transparent, elevation = 0.dp) {
             Text(text = "Country Detail")
         }
     }) {
